@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         Log.d(TAG, "Посчитаем общую стоимость");
-        int price = 5;
-        displayPrice(quantity*price);
+        String priceMessage = "Price is " + quantity;
+        displayMessage(priceMessage);
         }
     /*
      * This method is called when the + button is clicked.
@@ -65,5 +65,12 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
         Toast.makeText(this,"Пожалуйста, уплатите указанную сумму", Toast.LENGTH_SHORT).show();
+    }
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 }
