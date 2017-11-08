@@ -7,70 +7,67 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.NumberFormat;
-
 /**
  * This app displays an order form to order coffee.
  */
-public class MainActivity extends AppCompatActivity {
-    int quantity = 0;
-    private static final String TAG = "JustJava";
+    public class MainActivity extends AppCompatActivity {
+        //объявляю глобальные переменные
+        int quantity = 0;
+        private static final String TAG = "JustJava";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    /**
-     * This method is called when the order button is clicked.
-     */
+    //метод для расчета стоимости
+    private int calculatePrice () {
+        int price = quantity * 5;
+        return price;
+    }
+    //Метод для вывода уведомления
+    private String createSummaryOrder (int price){
+        String priceMessage = "Name: Vitaliy Pedash";
+        priceMessage += "\nQuanty: " + quantity;
+        priceMessage += "\nTotal: " +  price;
+        priceMessage += "\nThanks for purchase!";
+        return priceMessage;
+    }
+    //Метод, который выводит информацию после клика на кнопку Submit
     public void submitOrder(View view) {
         Log.d(TAG, "Посчитаем общую стоимость");
-        String priceMessage = "Price is " + quantity;
+        int price = calculatePrice();
+        String priceMessage = createSummaryOrder(price);
         displayMessage(priceMessage);
-        }
-    /*
-     * This method is called when the + button is clicked.
-     */
+      }
+    //Метод для увеличения количества на единицу
     public void increment(View view) {
         Log.d(TAG, "Увеличиваем на 1 единицу кол-во  чашек");
         quantity= quantity+1;
         display(quantity);
+        Toast toast = Toast.makeText(MainActivity.this, "Нажата кнопка +", Toast.LENGTH_LONG);
+        toast.show();
         }
-    /**
-     * This method displays the given quantity value on the screen.
-     */
-      /*
-     * This method is called when the - button is clicked.
-     */
+    //Метод для уменьшения количества на единицу
     public void decrement(View view) {
         Log.d(TAG, "Уменьшаем на 1 единицу кол-во чашек");
         quantity= quantity-1;
         display(quantity);
+        Toast toast = Toast.makeText(MainActivity.this, "Нажата кнопка -", Toast.LENGTH_LONG);
+        toast.show();
     }
-    /**
-     * This method displays the given quantity value on the screen.
-     */
+    // Метод, который тобржает количество чашек
     private void display(int number) {
         Log.d(TAG,"Отобразим общее кол-во чашек");
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        Log.d(TAG, "Отобразим общую стоимость");
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-        Toast.makeText(this,"Пожалуйста, уплатите указанную сумму", Toast.LENGTH_SHORT).show();
-    }
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+       //Метод, который выводит окончательный результат
+      private void displayMessage(String message) {
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+          orderSummaryTextView.setText(message);
+          Toast toast = Toast.makeText(MainActivity.this, "Нажата кнопка Order", Toast.LENGTH_LONG);
+          toast.show();
     }
 }
+

@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorAccent"
     tools:context="com.example.android.justjava.MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
-        android:text="@string/price"
+        android:text="@string/order_summary_text_view"
         android:padding="16dp"
         />
     <TextView
@@ -61,7 +59,7 @@
         android:textSize="16sp"
         android:paddingLeft="16dp"
         android:paddingBottom="16dp"
-        android:id="@+id/price_text_view"
+        android:id="@+id/order_summary_text_view"
         android:textColor="#000000"
         />
     <Button
