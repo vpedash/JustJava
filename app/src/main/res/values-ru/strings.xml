@@ -1,0 +1,26 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Просто Java</string>
+    <string name="order">Заказ</string>
+    <string name="quantity">Количество</string>
+    <string name="order_summary_text_view">Итого:</string>
+    <string name="cash">₴10</string>
+    <string name="incrbutton">+</string>
+    <string name="decrbutton">-</string>
+    <string name="cream_checkbox">Взбитые сливки</string>
+    <string name="chocolate_checkbox">Шоколад</string>
+    <string name="checkbox_title">Дополнительно</string>
+    <string name="hint">Имя и Фамилия</string>
+    <string name="mail">Почта</string>
+    <string name="alarm">Напоминание</string>
+    <string name="calendar">Календарь</string>
+    <string name="order_summary_name">ФИО: <xliff:g id="userName" example="Amy">%s</xliff:g></string>
+    <string name="order_summary_whipped_cream">Добавить взбитые сливки: <xliff:g id="hasWhippedCream" example="Да">%b</xliff:g></string>
+    <string name="order_summary_chocolate">Добавить шоколад: <xliff:g id="hasChocolate" example="Да">%b</xliff:g></string>
+    <string name="order_summary_quantity">Количество: <xliff:g id="quantity">%d</xliff:g></string>
+    <string name="order_summary_price">Итого: <xliff:g id="price" example="$10">%d</xliff:g></string>
+    <string name="order_summary_message">Благодарим за заказ!!!</string>
+    <string name="emailMessage">Ваш заказ </string>
+    <string name="shopName">Кофейня "Almeria"</string>
+    <string name="incrementMessage">Вы не можете заказать больше чем 100 чашек кофе!!!</string>
+    <string name="decrementMessage">Вы не можете заказать меньше чем 1 чашку кофе!!!</string>
+</resources>

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Just Java</string>
     <string name="order">ORDER</string>
     <string name="quantity">quantity</string>
@@ -6,4 +6,21 @@
     <string name="cash">₴10</string>
     <string name="incrbutton">+</string>
     <string name="decrbutton">-</string>
+    <string name="cream_checkbox">Whipped cream</string>
+    <string name="chocolate_checkbox">Chocolate</string>
+    <string name="checkbox_title">TOPPINGS</string>
+    <string name="hint">Name</string>
+    <string name="mail">MAIL</string>
+    <string name="alarm">ALARM</string>
+    <string name="calendar">CALENDAR</string>
+    <string name="order_summary_name">Name: <xliff:g id="userName" example="Amy">%s</xliff:g></string>
+    <string name="order_summary_whipped_cream">Add whipped cream? <xliff:g id="hasWhippedCream" example="true">%b</xliff:g></string>
+    <string name="order_summary_chocolate">Add chocolate: <xliff:g id="hasChocolate">%b</xliff:g></string>
+    <string name="order_summary_quantity">Quantity: <xliff:g id="quantity">%d</xliff:g></string>
+    <string name="order_summary_price">Total: <xliff:g id="price" example="$10">%d</xliff:g></string>
+    <string name="order_summary_message">Thanks for purchase!!!</string>
+    <string name="emailMessage">Your purchase </string>
+    <string name="shopName">Coffeeshop "Almeria"</string>
+    <string name="incrementMessage">You can\'t purchase more than 100 caps of coffee!!!</string>
+    <string name="decrementMessage">You can\'t purchase less than a cap of coffee!!!</string>
 </resources>
