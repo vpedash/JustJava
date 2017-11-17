@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import java.sql.Time;
 
-
 /**
  * This app displays an order form to order coffee.
  */
@@ -28,7 +27,6 @@ import java.sql.Time;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     //метод для расчета стоимости
     private int calculatePrice (boolean hasChocolate, boolean hasWhippedCream) {
         int basePrice = 5;
@@ -40,7 +38,6 @@ import java.sql.Time;
         }
             return quantity*basePrice;
     }
-
     //Метод для вывода уведомления
     private String createSummaryOrder (int price, boolean hasWhippedCream, boolean hasChocolate, String userName){
         String priceMessage = getString(R.string.order_summary_name, userName);
@@ -98,7 +95,6 @@ import java.sql.Time;
            startActivity(intent);
         }
     }
-
     //Метод для вызова календаря и установки event
     public void addEvent(View view) {
         EditText userNameView = (EditText) findViewById(R.id.username_view);
